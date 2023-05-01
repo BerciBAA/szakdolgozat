@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:background="@drawable/backgorund">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MessagesFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:translationZ="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/messageFragmentToProfileFragment"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="25dp"
+                app:icon="@drawable/ic_baseline_account_circle_24"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="645dp" />
+
+            <Button
+                android:id="@+id/messageFragmentToMainFragment"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="25dp"
+                android:textAllCaps="true"
+                app:icon="@drawable/ic_baseline_accessibility_new_24"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                tools:layout_editor_absoluteX="170dp"
+                tools:layout_editor_absoluteY="645dp" />
+
+            <Button
+                android:id="@+id/mainFragmentToMessagesFragment"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="25dp"
+                app:icon="@drawable/ic_baseline_message_24"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                tools:layout_editor_absoluteX="301dp"
+                tools:layout_editor_absoluteY="645dp" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/yourFriendsRecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="640dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

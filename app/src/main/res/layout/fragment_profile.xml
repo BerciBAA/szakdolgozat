@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProfileFragment">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/mainFragmentToProfileFragment"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="25dp"
+                app:icon="@drawable/ic_baseline_account_circle_24"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="645dp" />
+
+            <Button
+                android:id="@+id/profileFragmentToMainFragment"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="25dp"
+                android:textAllCaps="true"
+                app:icon="@drawable/ic_baseline_accessibility_new_24"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                tools:layout_editor_absoluteX="170dp"
+                tools:layout_editor_absoluteY="645dp" />
+
+            <Button
+                android:id="@+id/profileFragmentToMessagesFragment"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="25dp"
+                app:icon="@drawable/ic_baseline_message_24"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                tools:layout_editor_absoluteX="301dp"
+                tools:layout_editor_absoluteY="645dp" />
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="381dp"
+            android:layout_height="631dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/usernameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/username"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/descriptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:maxLines="6" />
+
+                <Switch
+                    android:id="@+id/leagueOfLegendsSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="League of Legends" />
+
+                <Switch
+                    android:id="@+id/counterStrikeSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Counter-Strike:Global Offensive" />
+
+                <Switch
+                    android:id="@+id/dotaSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dota 2" />
+
+                <Button
+                    android:id="@+id/uploadImagesButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Images" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/profileImageRecycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/SaveButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Save" />
+
+                <ImageView
+                    android:id="@+id/profileFragemntButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
